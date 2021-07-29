@@ -146,17 +146,7 @@ export const Input = function(app) {
     });
 
     $(document).contextmenu(e => {
-      if (!app.inWorkspace()) return;
-
-      const canSpawn =
-        $(e.target).hasClass('nodes') || $(e.target).parents('.nodes').length;
-
-      if (e.button === MouseButton.Right && canSpawn) {
-        const { x, y } = app.workspace.toWorkspaceCoordinates(e.pageX, e.pageY);
-        app.newNodeAt(x, y);
-      }
-
-      return !canSpawn;
+      return false;
     });
   };
 

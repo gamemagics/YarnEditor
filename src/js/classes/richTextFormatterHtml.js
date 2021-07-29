@@ -17,13 +17,14 @@ export const HtmlRichTextFormatter = function(app) {
     case 'cmd': return '<<';
     case 'opt': return '[[';
     case 'color': return '<color=#>';
+    case 'material': return '<material=0>';
     default: return `<${tag}>`;
     };
   };
 
   this.getTagClose = function(tag) {
     switch (tag) {
-    case 'cmd': return '>>';
+    case 'cmd': return '';
     case 'opt': return '|]]';
     default: return `</${tag}>`;
     };

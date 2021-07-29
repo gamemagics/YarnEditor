@@ -231,7 +231,7 @@ export let Node = function(options = {}) {
         let movedX = x - self.x();
         let movedY = y - self.y();
 
-        const nodes = app.workspace.getSelectedNodes();
+        let nodes = app.workspace.getSelectedNodes();
         // Prevent yarn from moving a node when you scroll its contents on a touch screen
         if (
           e.originalEvent.type === 'mousemove' ||

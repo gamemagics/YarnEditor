@@ -210,18 +210,22 @@
           <button class="bbcode-button hide-when-narrow" onclick="app.richTextFormatter.insertTag('opt')" title="Choice/Link">
             <svg class="icon icon-link icon-lg icon-fw"><use xlink:href="public/icons.svg#icon-link"></use></svg>
           </button>
+
+          <button class="bbcode-button" onclick="app.richTextFormatter.insertTag('material')" title="Material/Shader">
+            <svg class="icon icon-coffee icon-lg icon-fw"><use xlink:href="public/icons.svg#icon-coffee"></use></svg>
+          </button>
           <span class="hide-when-narrow">&nbsp;</span>
           <span class="hide-when-narrow bbcode-button-separator">||</span>
           <span class="hide-when-narrow">&nbsp;</span>
-          <button class="bbcode-button" onclick="app.richTextFormatter.insertTag('img')" title="Image">
-            <svg class="icon icon-image icon-lg icon-fw"><use xlink:href="public/icons.svg#icon-image"></use></svg>
-          </button>
+<!--          <button class="bbcode-button" onclick="app.richTextFormatter.insertTag('img')" title="Image">-->
+<!--            <svg class="icon icon-image icon-lg icon-fw"><use xlink:href="public/icons.svg#icon-image"></use></svg>-->
+<!--          </button>-->
           <button class="bbcode-button" onclick="app.richTextFormatter.insertTag('color')" title="Color Picker">
             <svg class="icon icon-palette icon-lg icon-fw"><use xlink:href="public/icons.svg#icon-palette"></use></svg>
           </button>
-          <button class="bbcode-button hide-when-narrow" onclick="app.insertEmoji()" title="Emoji">
-            <svg class="icon icon-sweat-emoji icon-lg icon-fw"><use xlink:href="public/icons.svg#icon-sweat-emoji"></use></svg>
-          </button>
+<!--          <button class="bbcode-button hide-when-narrow" onclick="app.insertEmoji()" title="Emoji">-->
+<!--            <svg class="icon icon-sweat-emoji icon-lg icon-fw"><use xlink:href="public/icons.svg#icon-sweat-emoji"></use></svg>-->
+<!--          </button>-->
 
           <!-- ko if:app.usingVisualStudioCodeExtension() -->
           <button class="bbcode-button" id="edit-node-in-vscode" onclick="app.editNodeInVisualStudioCodeEditor(app.editing())">🛠️ Edit in Visual Studio Code Text Editor</button>
@@ -345,7 +349,7 @@
     <!-- app info -->
     <div class="app-info">
       <span class="app-title" data-bind="text:app.name"></span>
-      <span class="app-version" data-bind="text:app.version"></span>
+      <span class="app-version" data-bind="text:app.version"></span><span>Game Magics Only</span>
       <span class="file-name" data-bind="text:data.isDocumentDirty() ? data.editingName() + '*' : data.editingName(),click:app.data.trySaveCurrent"></span>
     </div>
     <div class="title" id="addPwa">🍰Add to Homescreen📲</div>

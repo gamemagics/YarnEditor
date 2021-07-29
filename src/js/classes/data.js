@@ -208,7 +208,7 @@ export const data = {
     });
   },
   openFolder: function(e, foldername) {
-    editingFolder = foldername;
+    this.editingFolder = foldername;
     Swal.fire({
       text:
         'openFolder not yet implemented e: ' + e + ' foldername: ' + foldername,
